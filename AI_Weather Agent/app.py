@@ -3,7 +3,9 @@ import requests
 from google import genai
 
 #API KEY
-
+import os
+api=os.getenv("API_KEY")
+client=genai.Client(api_key=api)
 
 #get coordinates
 def get_coordinates(city):
