@@ -1,12 +1,13 @@
 from google import genai
 import gradio as gr
 
-#Gemini API key
-client=genai.Client(api_key="")
+import os
+api=os.getenv("API_KEY")
+client=genai.Client(api_key=api)
 
 def generate_blog(topic,audience,tone,words,language):
   prompt=f"""
-  write a {word}-word blog.
+  write a {words}-word blog.
   Topic:{topic}
   Audience:{audience}
   Tone :{tone}
