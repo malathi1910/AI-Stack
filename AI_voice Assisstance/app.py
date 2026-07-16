@@ -4,8 +4,9 @@ import speech_recognition as sr
 from gtts import gTTS
 import tempfile
 
-client=genai.Client(api_key="")
-
+import os
+api=os.getenv("API_KEY")
+client=genai.Client(api_key=api)
 #Speech to Text
 def speech_to_text(audio):
   recognizer=sr.Recognizer()
