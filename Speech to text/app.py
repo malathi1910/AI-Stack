@@ -4,7 +4,7 @@ import gradio as gr
 from google import genai
 
 #Gemini API Key
-client=genai.Client(api_key="")
+client=genai.Client(api_key="YOUR_API_KEY")
 
 def transcribe(audio_path):
   if audio_path is None:
