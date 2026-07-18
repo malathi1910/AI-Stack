@@ -2,7 +2,7 @@ from google import genai
 import gradio as gr
 
 import os
-api=os.getenv("API_KEY")
+api=os.getenv("YOUR_GEMINI_API_KEY")
 client=genai.Client(api_key=api)
 
 def generate_blog(topic,audience,tone,words,language):
